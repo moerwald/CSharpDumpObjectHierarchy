@@ -32,7 +32,9 @@ namespace DumpInheritanceHierarchy
         {
             var d = new D();
             var result = d.GetType().GetBaseTypes().ToList();
+            // Prints: "C->B->A->Object"
             Console.WriteLine($"{string.Join("->", result.Select(t => t.Name))}");
+
         }
     }
 }
